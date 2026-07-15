@@ -1,8 +1,9 @@
 import cv2
 import os
 from glob import glob
+import sys
 
-folder_name = 'snapshots/20240829'  # Change this to your folder's name
+folder_name = 'snapshots/' + sys.argv[1]
 
 image_files = sorted(glob(os.path.join(folder_name, '*.webp')))
 

@@ -33,7 +33,7 @@ with ThreadPoolExecutor(max_workers=4) as executor:
         folder_name, timestamp = get_timestamp()
         executor.submit(save_image, frame, 'snapshots/'+folder_name, timestamp)
 
-        time.sleep(1)
+        time.sleep(20)
 
 cap.release()
 cv2.destroyAllWindows()
